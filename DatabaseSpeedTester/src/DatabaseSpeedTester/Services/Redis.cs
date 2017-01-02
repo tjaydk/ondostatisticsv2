@@ -8,7 +8,7 @@ namespace DatabaseSpeedTester.Services
     public class Redis
     {
         //Connection string to specific redis db
-        static string connectionString = "OndoRedisTest.redis.cache.windows.net:6380,password=eN58/X5r3q9CbuNG5jbuZbxXcUmJZMp7YHOryDIbBtU=,ssl=True,abortConnect=False";
+        static string connectionString = "";
         private static Lazy<ConnectionMultiplexer> lazyConnection;
 
         /// <summary>

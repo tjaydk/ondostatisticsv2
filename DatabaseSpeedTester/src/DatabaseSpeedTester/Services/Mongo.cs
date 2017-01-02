@@ -13,7 +13,7 @@ namespace DatabaseSpeedTester.Services
         /// To change specific database on MongoDB change the dbName
         /// To cahnge collection on set db change collection
         /// </summary>
-        private string connectionString     = "mongodb://ondomongotest2:O9StUXi3ZeAw5pgnSxAv5pyZvasLtmc248sIIoTiQaDwhwUQmlBnQl0BlmMhWsAgZs8OlKSatIRIgk2jiv09Eg==@ondomongotest2.documents.azure.com:10250/?ssl=true";
+        private string connectionString     = "";
         private string dbName               = "testDb";
         private string collection           = "clubs";
 

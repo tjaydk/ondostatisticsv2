@@ -117,3 +117,6 @@ C:\Users\Dennis\Desktop\Lokal Fordele\Hovedopgave\OndoStatisticsWebjob_2.0\OndoS
 C:\Users\Dennis\Desktop\Lokal Fordele\Hovedopgave\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Dennis\Desktop\Lokal Fordele\Hovedopgave\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\bin\Debug\StackExchange.Redis.dll
 C:\Users\Dennis\Desktop\Lokal Fordele\Hovedopgave\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\bin\Debug\StackExchange.Redis.xml
+C:\Users\Dennis\Documents\ondogit\ondostatisticsv2\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\bin\Debug\OndoStatisticsWebjob_2.0.exe.config
+C:\Users\Dennis\Documents\ondogit\ondostatisticsv2\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\obj\Debug\OndoStatisticsWebjob_2.0.exe
+C:\Users\Dennis\Documents\ondogit\ondostatisticsv2\OndoStatisticsWebjob_2.0\OndoStatisticsWebjob_2.0\obj\Debug\OndoStatisticsWebjob_2.0.pdb
