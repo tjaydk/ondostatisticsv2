@@ -1,0 +1,198 @@
+﻿<!--TRADEUNION VIEW-->
+<div class="viewTradeUnion">
+    <navbar-side-trade></navbar-side-trade>
+    <div class="mainContent">
+        <section class="boxInfoTradeUnion">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Transaktioner dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.transactionsCurrentQuarter}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Oprettelser dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.subscriptionsCurrentQuarter}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Aktivitet ialt dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.activityCurrentQuarter}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Antal points optjent dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.pointsCurrentQuarter}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clubGraphContent">
+            <div class="clubHistoryGraph col-md-8 hidden-xs" id="clubHistoryGraph">
+                <div class="tradeUnionNotifications">
+                    <h4>Aktivitet dette kvartal</h4>
+                    <ul class="list-unstyled">
+                        <canvas id="line-transactions-trade" width="350" height="140"></canvas>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="topShopsTable">
+                    <h4>Top 5 butikker dette kvartal</h4>
+                    <p>Scoren er udregnet ved at points tæller 50%, oprettelser 300% og transaktioner 150%.</p>
+                    <table class="table">
+                        <tr ng-repeat="shop in ctrl.topShops" ng-click="ctrl.getAllOndoData(this)" data-toggle="modal" data-target="#myModal">
+                            <td><img src="{{shop.profilePicture}}" /></td>
+                            <td>
+                                <p class="topShopTitle">{{shop.title}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="tablesForTradeUnion">
+            <div class="userInfoBar">
+                <p>Bruger statestik</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table animate-repeat">
+                    <thead>
+                    <th class="col-md-4"></th>
+                    <th class="col-md-4" style="text-align: center;">Antal </th>
+                    <th class="col-md-4" style="text-align: center;">Procentdel af total antal kort brugere</th>
+                    </thead>
+                    <tr>
+                        <td>Total antal kort brugere dette kvartal</td>
+                        <td style="text-align: center";>{{ctrl.cardUsersQuarter}}</td>
+                        <td style="text-align: center";>{{ctrl.cardUsersQuarterPercent}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Antal aktive kort brugere dette kvartal</td>
+                        <td style="text-align: center" ;>{{ctrl.activeCardUsersQuarter}}</td>
+                        <td style="text-align: center" ;>{{ctrl.activeCardUsersQuarterPercent}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Antal inaktive kort brugere dette kvartal</td>
+                        <td style="text-align: center" ;>{{ctrl.inactiveCardUsersQuarter}}</td>
+                        <td style="text-align: center" ;>{{ctrl.inactiveCardUsersQuarterPercent}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Antal app brugere med kort dette kvartal</td>
+                        <td style="text-align: center" ;>{{ctrl.appUsersQuarter}}</td>
+                        <td style="text-align: center" ;>{{ctrl.appUsersQuarterPercent}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Antal kort brugere uden valgt klub dette kvartal</td>
+                        <td style="text-align: center" ;>{{ctrl.cardUsersWithNoClub}}</td>
+                        <td style="text-align: center" ;>{{ctrl.cardUsersWithNoClubPercent}}%</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Modal -->
+<div style="color: black;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{ctrl.viewOndo.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <section class="ModalBoxInfoTradeUnion">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Transaktioner dette kvartal</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.transactions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Transaktioner denne uge</p>
+                                </div>
+                                <div class="modalBoxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.weeksArray[0].transactions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Oprettelser dette kvartal</p>
+                                </div>
+                                <div class="modalBoxValueTradeunion">
+                                    <div class="boxValueTradeunionFigures">
+                                        <p><strong>{{ctrl.viewOndo.subscriptions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Oprettelser denne uge</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.weeksArray[0].subscriptions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hidden-xs">
+                    <div class="modalGraphContent">
+                        <p>Aktivitet dette kvartal</p>
+                        <div id="modalGraph">
+                            <canvas id="modal-line-graph" width="350" height="140"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Luk</button>
+            </div>
+        </div>
+    </div>
+</div>

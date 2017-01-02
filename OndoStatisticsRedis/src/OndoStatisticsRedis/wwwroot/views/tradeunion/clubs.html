@@ -1,0 +1,96 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <section class="boxInfoTradeUnion">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Point der går til klubber</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.points}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Ikke tildelte point: {{ctrl.unassignedPoints}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Antal App brugere</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.appUsers}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Total antal brugere: {{ctrl.users}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Aktive brugere</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.activeUsers}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Inaktive brugere: {{ctrl.inactiveUsers}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Oprettelser i klubber</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.subscriptions}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Fordelt over {{ctrl.clubCount}} klubber:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tablesForTradeUnion">
+            <h4>Liste over Klubber i din by</h4>
+            <p>Tal er for dette kvartal - du kan ordne efter flest oprettelser, transaktioner og point ved at klikke på de pågældende tabelemner eller ved at søge i søgefeltet</p>
+            <div class="table-responsive">
+                <table class="table animate-repeat" id="tradeunionClubTableSection">
+                    <thead>
+                    <th>Klub <span style="margin-left: 15px;"><input ng-model="ctrl.search" placeholder="Søg efter butik" /></span></th>
+                    <th><p class="orderBy" ng-click="sortBy('points')">Point til klubben <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'points' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'points' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('appUsers')">App brugere <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'appUsers' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'appUsers' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('users')">Brugere <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'users' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'users' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('activeUsers')">Aktive brugere <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'activeUsers' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'activeUsers' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('inactiveUsers')">Inaktive brugere <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'inactiveUsers' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'inactiveUsers' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('subscriptions')">Nye oprettelser <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'subscriptions' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'subscriptions' && reverse === true"></span></p></th>
+                    </thead>
+                    <tr class="animate-repeat" ng-repeat="club in ctrl.clubArray | filter: ctrl.search | orderBy:propertyName:!reverse track by $index ">
+                        <td><p>{{club.title}}</p></td>
+                        <td><p>{{club.points}}</p></td>
+                        <td><p>{{club.appUsers}}</p></td>
+                        <td><p>{{club.cardUsers}}</p></td>
+                        <td><p>{{club.activeCardUsers}}</p></td>
+                        <td><p>{{club.inactiveCardUsers}}</p></td>
+                        <td><p>{{club.subscriptions}}</p></td>
+                    </tr>
+                </table>
+                <button class="btn btn-danger" ng-click="ctrl.printDataClub()">Print tabel</button>
+            </div>
+        </section>
+    </div>
+</div>

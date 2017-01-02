@@ -1,0 +1,37 @@
+﻿<div id="navBar" class="sideNavBar" ng-controller="navBarSideCtrl as ctrl">
+    
+    <!-- USERPROFILE -->
+    <div class="row">
+        <div id="sideNavBarShopInfo" ng-hide="hideInfoOnMobileToggle.bool" class="animated flipInX">
+            <div id="profilePictureShop">
+                <!-- Profile picture will be inserted from controller to avoid url call to unspecified url -->
+            </div>
+            <h4 id="shopTitle">{{ctrl.ondoTitle}}</h4>
+            <p id="shopLocality">{{ctrl.ondoLocality}}</p>
+        </div>
+    </div>
+    
+    <!-- TOGGLE -->
+    <i id="sideNavBarToggle" ng-click="ctrl.toggle()" class="fa fa-bars" aria-hidden="true"></i>
+    
+    <!-- LINKS -->
+    <div class="row sideNavBarListSection">
+        <ul id="sideNavBarList">
+            <li class="sideNavBarLink"><a href="#/shop"><i class="fa fa-tachometer navBarIcon" aria-hidden="true"></i>Dashboard</a></li>
+            <li class="sideNavBarLink"><a href="#/shop/subscriptions"><i class="fa fa-user-plus navBarIcon" aria-hidden="true"></i>Oprettelser</a></li>
+            <li class="sideNavBarLink"><a href="#/shop/transactions"><i class="fa fa-credit-card navBarIcon" aria-hidden="true"></i>Transaktioner</a></li>
+            <li class="sideNavBarLink"><a href="#/shop/history"><i class="fa fa-line-chart navBarIcon" aria-hidden="true"></i>Historik</a></li>
+            <li class="sideNavBarLink"><a href="#" ng-click="ctrl.logout()"><i class="fa fa-sign-out navBarIcon" aria-hidden="true"></i>Log ud</a></li>
+            
+            <!-- CHOOSE ONDO DROPDOWN -->
+            <li>
+                <div class="row">
+                    <div class="ondoDropDown" id="ondoDropDownElement">
+                        <p>Vælg butik</p>
+                        <select id="ondoSelect" ng-model="ctrl.ondoChosen" ng-click="ctrl.chooseOndo()" ng-options="option.title for option in ctrl.ondoList track by option.ondoId"></select>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

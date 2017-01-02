@@ -1,0 +1,48 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <header>
+            <header>
+                <h4>Her kan du se historisk data omkring brugere.</h4>
+                <p>I graferne bliver der vist data fra det sidste år, hvis så meget data er registeret. I tabellen i bunden kan der ses data fra alle kvartaler</p>
+            </header>
+        </header>
+        <section class="row">
+            <div class="historyGraphElement">
+                <div class="historyGraph col-md-6 col-sm-6">
+                    <div class="graph text-center">
+                        <p>Graf over procentvis ændring over de sidste 4 kvartaler</p>
+                        <canvas id="line-users-history" width="400" height="180"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="historyGraphElement">
+                <div class="historyGraph col-md-6 col-sm-6">
+                    <div class="graph text-center">
+                        <p>Graf med de aktuelle tal over de sidste 4 kvartaler</p>
+                        <canvas id="bar-users-history" width="400" height="180"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tablesForTradeUnion">
+            <div class="userInfoBar">
+                <p>Bruger statestik</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table animate-repeat">
+                    <thead>
+                    <th class="col-md-4"><select id="userHistoryDropdown" ng-model="ctrl.categoryDropDown" ng-options="x.title for x in period"><option value="" disabled selected>vælg kvartal</option></select></th>
+                    <th class="col-md-4" style="text-align: center;">Antal </th>
+                    <th class="col-md-4" style="text-align: center;">Procentdel af total antal kort brugere</th>
+                    </thead>
+                    <tr class="animate-repeat" ng-repeat="value in ctrl.userArray[ctrl.categoryDropDown.value]">
+                        <td>{{value.title}}</td>
+                        <td style="text-align: center" ;>{{value.number}}</td>
+                        <td style="text-align: center" ;>{{value.percentage}}%</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>

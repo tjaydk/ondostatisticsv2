@@ -1,0 +1,33 @@
+﻿<div id="navBar" class="sideNavBar" ng-controller="navBarSideTradeCtrl as ctrl">
+    <div class="row" ng-hide="hideInfoOnMobileToggle.bool">
+        <div id="sideNavBarShopInfo" class="animated flipInX">
+            <div id="profilePictureTrade">
+                <!-- Profile picture will be inserted from controller to avoid url call to unspecified url -->
+            </div>
+            <h4 id="shopTitle">{{ctrl.ondoTitle}}</h4>
+            <p id="shopLocality">{{ctrl.ondoLocality}}</p>
+        </div>
+    </div>
+    <!-- TOGGLE -->
+    <i id="sideNavBarToggle" ng-click="ctrl.toggle()" class="fa fa-bars" aria-hidden="true"></i>
+    <div class="row sideNavBarListSection">
+        <ul id="sideNavBarList">
+            <li class="sideNavBarLink"><a href="#/tradeunion"><i class="fa fa-tachometer navBarIcon" aria-hidden="true"></i>Dashboard</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/shops"><i class="fa fa-list-alt navBarIcon" aria-hidden="true"></i>Butiksoversigt</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/clubs"><i class="fa fa-futbol-o navBarIcon" aria-hidden="true"></i>Kluboversigt</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/subscriptions"><i class="fa fa-user-plus navBarIcon" aria-hidden="true"></i>Oprettelser</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/transactions"><i class="fa fa-credit-card navBarIcon" aria-hidden="true"></i>Transaktioner</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/history"><i class="fa fa-line-chart navBarIcon" aria-hidden="true"></i>Historik</a></li>
+            <li class="sideNavBarLink"><a href="#/tradeunion/userhistory"><i class="fa fa fa-users navBarIcon" aria-hidden="true"></i>Bruger Historik</a></li>
+            <li class="sideNavBarLink"><a href="#" ng-click="ctrl.logout()"><i class="fa fa-sign-out navBarIcon" aria-hidden="true"></i>Log ud</a></li>
+            <li>
+                <div class="row">
+                    <div class="ondoDropDown" id="ondoDropDownElement">
+                        <p>Vælg butik</p>
+                        <select id="ondoSelect" ng-model="ctrl.ondoChosen"  ng-options="option.title for option in ctrl.ondoList track by option.ondoId"></select>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

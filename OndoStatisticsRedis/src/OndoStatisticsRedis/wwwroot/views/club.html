@@ -1,0 +1,364 @@
+﻿<!--SHOP VIEW-->
+<div class="clubContent">
+    <div class="clubContentElement">
+        <div class="container">
+            <header>
+                <div class="clubLogedIn">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-sm-push-6 userDataBox hidden-xs">
+                            <div class="userData">
+                                <div class="profilePicture animated flipInX">
+                                    <div class="profilePictureFront">
+                                        <div id="profilePictureClub">
+                                            <!-- Profile picture will be inserted from controller to avoid url call to unspecified url -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>{{ctrl.user}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-sm-pull-6">
+                            <div class="hidden-xs">
+                                <h1><strong>Dashboard</strong></h1>
+                            </div>
+                            <div class="visible-xs">
+                                <h3>Dashboard</h3>
+                            </div>
+                            <div class="hidden-xs">
+                                <h4>Velkommen til dit interaktive dashboard.</h4>
+                            </div>
+                            <p>Her kan du se tal for det nuværende kvartal samt historik for tidligere kvartaller. <br /><strong>Tallene er opgjort i point.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="boxInfoClub">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="boxClub animated" id="boxOne" value="0">
+                            <div class="frontElement">
+                                <div class="boxHeaderClub">
+                                    <h5>Prognosetal til dato</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.prognoseThisQuarterFigures}}</strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Forventet for hele kvartal: {{ctrl.prognoseThisQuarter}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backElement hidden">
+                                <div class="boxHeaderClub">
+                                    <h5>Hvis 80% gjorde som de 20% bedste</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.prognoseEightyThisQuarterFigures}}</strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Mulig prognose for hele kvartal: {{ctrl.prognoseEightyThisQuarter}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxClub animated" id="boxTwo" value="1">
+                            <div class="frontElement">
+                                <div class="boxHeaderClub">
+                                    <h5>Procent aktive støttere</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.currentActiveBenefactorsPercent}}<span style="font-size: 18px;"> %</span></strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Få aktiveret dine støttere.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backElement hidden">
+                                <div class="boxHeaderClub">
+                                    <h5>Antal støttere</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.currentBenefactorNumber}}</strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Hvoraf {{ctrl.currentInactiveBenefactors}} er inaktive</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxClub animated" id="boxThree" value="2">
+                            <div class="frontElement">
+                                <div class="boxHeaderClub">
+                                    <h5>Procent der bruger app</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.appUsersPercent}}<span style="font-size: 18px;"> %</span></strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Målet er 80%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backElement hidden">
+                                <div class="boxHeaderClub">
+                                    <h5>Antal brugere uden app</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.notAppUsers}}</strong></p>
+                                        <p style="font-size: 14px; margin-top: -20px">Brugere med app: {{ctrl.appUsers}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxClub animated" id="boxFour" value="5">
+                            <div class="frontElement">
+                                <div class="boxHeaderClub">
+                                    <h5>Sidste kvartals point</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p><strong>{{ctrl.lastQuartersPoint.points}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backElement hidden">
+                                <div class="boxHeaderClub">
+                                    <h5>{{ctrl.whyZeroInHistoryText}}</h5>
+                                </div>
+                                <div class="boxValueClub">
+                                    <div class="boxValueClubFigures">
+                                        <p id="whyZeroInHistoryTextValue"><strong>{{ctrl.whyZeroInHistoryTextValue}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row visible-xs text-center">
+                        <div class="progressbarsMobile">
+                            <div class="row" id="progressBarIndicators">
+                                <div class="col-xs-6 text-center">
+                                    <p>Progression</p>
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:100%">
+                                        <p>.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <p>Prognose</p>
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:100%">
+                                        <p>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="progressBarCurrent" class="row">
+                                <p>Udfra aktuelle tal</p>
+                                <div class="progress" id="miniProgressBar">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarCurrentProgress}}">
+                                        <p></p>
+                                    </div>
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarPrognoseProgress}}">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 18px; margin-top: -20px;">{{ctrl.prognoseThisQuarterFigures}}/{{ctrl.target}}</p>
+                            </div>
+                            <div id="progressBarEightyPercent" class="row">
+                                <p>Hvis 80% gjorde som de 20% bedste</p>
+                                <div class="progress" id="miniProgressBar">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarEightyProgress}}">
+                                        <p></p>
+                                    </div>
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarEightyPrognoseProgress}}">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 18px; margin-top: -20px;">{{ctrl.prognoseEightyThisQuarterFigures}}/{{ctrl.target}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clubGraphContent hidden-xs">
+                <div class="clubHistoryGraph col-md-8" id="clubHistoryGraph">
+                    <div id="clubHistoryGraphElement0" class="clubHistoryGraphElements hidden">
+                        <h3><strong>Hvis 80% gjorde som de 20% bedste af jeres medlemmer</strong></h3>
+                        <p><strong>Hvorfor har det betydning:</strong></p>
+                        <p>Når 20% kan - så kan 80% også! Og bonus til klubben øges væsentligt, hvis man kan få flere til at gøre som de 20% bedste.</p>
+                        <p><strong>Hvad kan I gøre:</strong></p>
+                        <ul class="list-unstyled">
+                            <li>- Fortæl hvor vigtig det er at kortet bliver brugt flittigt og hver gang der handles lokalt.</li>
+                            <li>
+                                - Det er kun 2 spørgsmål de behøver at stille når de handler lokalt:
+                                <ul>
+                                    <li>Er I med i LokalFordele?</li>
+                                    <li>Hvis ja: "Hvad giver I bonus på?" / Hvis nej: "Hvorfor ikke?"</li>
+                                </ul>
+                                <p>Mange butikker har tilmeldt sig, men enkelte butikker der har valgt "at se tiden an". Hvis de ofte bliver spurgt, så får vi dem med hurtigere.</p>
+                            </li>
+                            <li>- Sørg for at minde hinanden om at bruge kortet – især hvis i mødes oppe i byen eller i butikkerne.</li>
+                        </ul>
+                    </div>
+                    <div id="clubHistoryGraphElement1" class="clubHistoryGraphElements hidden">
+                        <h3><strong>Hvis I har for mange med 0 eller næsten ingen transaktioner på kortet</strong></h3>
+                        <p><strong>Hvorfor har det betydning:</strong></p>
+                        <p>Kort der ikke bliver brugt har ingen værdi for klubben. Formodentlig handler kortholder lokalt, men er bare ikke opmærksom på at få sin bonus. Nogen butikker er gode til at spørge om man har kortet, men det er ikke alle, så man må selv være lidt aktiv.</p>
+                        <p><strong>Hvad kan I gøre:</strong></p>
+                        <ul class="list-unstyled">
+                            <li>- Fortæl hvor mange aktive og inaktive kort der er og gør opmærksom på at inaktive kort ingen værdi har for nogen.</li>
+                            <li>- Fortæl folk at det ikke er så vanskeligt – det er bare at komme i gang.</li>
+                            <li>- Hvis I har dem på 2 mands hånd - Spørg hvilke butikker de normalt handler I og vis dem hvilken bonus de kan opnå i netop disse butikker.</li>
+                        </ul>
+                    </div>
+                    <div id="clubHistoryGraphElement2" class="clubHistoryGraphElements hidden">
+                        <h3><strong>Hvis for få af jeres medlemmer har App'en installeret</strong></h3>
+                        <p><strong>Hvorfor har det betydning:</strong></p>
+                        <p>Det er tydeligt at de personer der er flittige med LokalFordele kortet også er personer med App installeret på deres Smartphone. Folk er også meget mere opmærksom på tilbud og hvor der kan hentes bonus, når de har App'en der skaber overblik og kan sende beskeder.</p>
+                        <p><strong>Hvad kan I gøre:</strong></p>
+                        <ul class="list-unstyled">
+                            <li>- Lav opslag hvor I opfordre folk til at downloade App'en og gør opmærksom på der er ekstra fordele i form af deltagelse i lotterier og konkurrencer ved at have App'en installeret.</li>
+                            <li>- Sørg for at I til møder med medlemmer spørger om de har fået App'en installeret.</li>
+                            <li>- Ved arrangementer få nogle unge mennesker eller andre med lidt teknisk indsigt i iOS og Android til at hjælpe medlemmerne med at få App'en installeret.</li>
+                        </ul>
+                    </div>
+                    <div id="clubHistoryGraphElement3" class="clubHistoryGraphElements animated fadeIn">
+                        <h3><strong>Dette er dit interaktive dashboard</strong></h3>
+                        <p>Her kan du se tal fra dette kvartal samt statistik over de sidste 4 kvartaller.</p>
+                        <p>
+                            De forskellige boxe er interaktive, og du kan trykke på dem for at se mere information.
+                            <br />De to midterste boxe i toppen giver endvidere en indikation på hvor langt du ligger fra målet på 80%.
+                        </p>
+                        <ul>
+                            <li>Grøn: 80%-100%</li>
+                            <li>Gul: 40%-80%</li>
+                            <li>Rød 0%-40%</li>
+                        </ul>
+                        <p><strong>Tallene for dette kvartal er prognosetal, hvad vil det sige?</strong></p>
+                        <p>De tal som vises henviser til støttere som lige nu peger på din klub/forening. Skulle støtteren vælge at støtte en anden klub eller forening inden kvartallet er slut så vil beløbet som støttere giver gå til dem og derved vil dine tal falde.</p>
+                        <p>Det er derfor en god ide at gøre hvad du kan få at få aktiveret så mange støttere som muligt samt finde flere støttere for at øge dit bidrag.</p>
+                    </div>
+                    <div id="clubHistoryGraphElement4" class="clubHistoryGraphElements hidden">
+                        <div class="row" style="margin-top: -40px; margin-bottom: 20px;">
+                            <h4><strong>Nuværende tal i forhold til målsætning</strong></h4>
+                            <p>Her kan du se hvor langt dine prognosetal ligger fra dit target for dine aktiviteter. Den øverste bar er for de nuværende tal og den nederste viser hvad du ville ligge på hvis 80% af dine støttere yde som de bedste 20%.</p>
+                        </div>
+                        <div class="row" id="progressBarIndicators">
+                            <div class="col-md-6 text-center">
+                                <p>Prognosetal</p>
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:100%">
+                                    <p>.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <p>Forventet prognosetal for hele kvartal</p>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:100%">
+                                    <p>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="progressBarCurrent" class="row">
+                            <p>Udfra aktuelle tal <span class="targetBarText">Target: {{ctrl.target}}</span></p>
+                            <div class="progress" id="miniProgressBar">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarCurrentProgress}}">
+                                    <p>{{ctrl.prognoseThisQuarterFigures}}</p>
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarPrognoseProgress}}">
+                                    <p>{{ctrl.prognoseThisQuarterBarText}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="progressBarEightyPercent" class="row">
+                            <p>Hvis 80% gjorde som de 20% bedste <span class="targetBarText">{{ctrl.eightyFromTarget}}</span></p>
+                            <div class="progress" id="miniProgressBar">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarEightyProgress}}">
+                                    <p>{{ctrl.prognoseEightyThisQuarterFigures}}</p>
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarEightyPrognoseProgress}}">
+                                    <p>{{ctrl.prognoseEightyThisQuarterBarText}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="clubHistoryGraphElement5" class="clubHistoryGraphElements hidden">
+                        <p class="clubHistoryGraphElementText"><strong>Grafen viser bidrag i point for de sidste 4 kvartaller.</strong></p>
+                        <div id="historyGraphOverlay"></div>
+                        <canvas id="bar-history-club" height="140" width="350"></canvas>
+                    </div>
+                    <div id="clubHistoryGraphElement6" class="clubHistoryGraphElements hidden">
+                        <h3><strong>Udnyt dit netværk og få flere penge til dine aktiviteter</strong></h3>
+                        <p>Størstedelen af folk der støtter dine projekter er folk du kender eller er tilknyttet dine aktiviteret på den ene måde eller den anden. Hvis du husker dit netværk på hvor nemt det er at bruge Lokal Fordele kortet og fortæller om dine aktiviteter vil det nemt kunne ses på dine bidrag.</p>
+                        <p>Husk derfor at din egen aktive indsats kan bidrage enormt til hvad du vil kunne etablere af aktiviteter i fremtiden.</p>
+                        <br />
+                        <p>Støt dit lokalområde</p>
+                        <p>MVH</p>
+                        <p>Lokal Fordele</p>
+                    </div>
+                </div>
+                <div class="clubHistoryInfo col-md-4">
+                    <div class="clubHistoryInfoBox col-md-6 col-sm-3" value="3" id="clubHistoryInfoBox0">
+                        <div class="frontElementSide">
+                            <div class="clubHistoryInfoBoxText">
+                                <p style="font-size: 22px">Instruktion</p>
+                            </div>
+                            <div class="miniChart">
+                                <i class="fa fa-cube" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="backElementSide">
+                            <p>Instruktion til dit interaktive dashboard</p>
+                        </div>
+                    </div>
+                    <div class="clubHistoryInfoBox col-md-6 col-sm-3" value="4" id="clubHistoryInfoBox1">
+                        <div class="frontElementSide">
+                            <p>Hvor langt fra mål?</p>
+                            <div class="progress" id="miniProgressBar">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarCurrentProgress}}">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:{{ctrl.miniBarPrognoseProgress}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backElementSide hidden">
+                            <div class="clubHistoryInfoBoxText">Nuværende tal/Target</div>
+                            <p style="font-size: 42px; margin-top: 15px;"><strong>{{ctrl.prognoseThisQuarterFigures}}</strong><span style="font-size: 18px;">/{{ctrl.target}}</span></p>
+                        </div>
+                    </div>
+                    <div class="clubHistoryInfoBox col-md-6 col-sm-3" value="5" id="clubHistoryInfoBox2">
+                        <div class="frontElementSide">
+                            <div class="clubHistoryInfoBoxText">
+                                <p style="font-size: 32px; font-family: 'Lobster', cursive;">Historik</p>
+                            </div>
+                        </div>
+                        <div class="backElementSide hidden">
+                            <p style="font-size: 18px; font-family: 'Lobster', cursive;">Historik over de sidste 4 kvartaller</p>
+                        </div>
+                    </div>
+                    <div class="clubHistoryInfoBox col-md-6 col-sm-3" value="6" id="clubHistoryInfoBox3">
+                        <div class="frontElementSide">
+                            <div class="clubHistoryInfoBoxText">
+                                <p>{{ctrl.day}}</p>
+                                <h2 style="font-size: 52px; margin-top: -5px;"><strong>{{ctrl.date}}</strong></h2>
+                                <p style="margin-top: -5px;">{{ctrl.month}}</p>
+                                <p style="font-size: 22px; margin-top: -10px;">{{ctrl.time}}</p>
+                            </div>
+                        </div>
+                        <div class="backElementSide hidden">
+                            <p>Tid til næste afregning</p>
+                            <h2 style="font-size: 52px; margin-top: -5px;"><strong>{{ctrl.daysTillNextPayment}}</strong></h2>
+                            <p style="margin-top: -5px;">dage</p>
+                            <p style="font-size: 22px; margin-top: -10px;">{{ctrl.timeLeftOfDay}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="clubFooter" class="hidden-sm hidden-xs">
+                <div class="footerMenu text-center">
+                    <div class="col-md-4"><div class="toggle"><div class="toggle toggle-modern"></div></div></div>
+                    <div class="col-md-4"><p>Copyright Ondodots {{ctrl.thisYear}}</p></div>
+                    <div class="col-md-4 text-right"><p id="logoutBtn" ng-click="ctrl.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i><span> Log ud</span></p></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

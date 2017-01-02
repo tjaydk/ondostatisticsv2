@@ -1,0 +1,76 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <section>
+            <h4>Her kan du se information omkring oprettelser</h4>
+            <p>Du kan se hvor mange oprettelser der er lavet i de forskellige butikker indenfor en given periode</p>
+
+        </section>
+        <section>
+            <p>Periode: {{ctrl.period}}<span id="periodModalPicker" data-toggle="modal" data-target="#myPeriodModal" hidden>vælg periode</span></p>
+            <div class="graph hidden-sm hidden-xs">
+                <canvas id="bar-transactions-shops" width="400" height="180"></canvas>
+            </div>
+            <div class="graph visible-sm visible-xs">
+                <canvas id="bar-transactions-shops-sm" width="180" height="400"></canvas>
+            </div>
+        </section>
+
+        <section class="errorTransactionSection hidden">
+            <h4>Liste over mulige fejltransaktioner</h4>
+            <p ng-model="ctrl.errorStatusMsg"></p>
+            <table class="table">
+                <thead>
+                <th><strong>Butik</strong></th>
+                <th><strong>Transaktionsdato</strong></th>
+                <th><strong>Refusionsdato</strong></th>
+                <th><strong>Point</strong></th>
+                </thead>
+                <tr ng-repeat="errorTransaction in ctrl.errorTransactions | orderBy: 'errorTransactionShopTitle'">
+                    <td>{{errorTransaction.errorTransactionShopTitle}}</td>
+                    <td>{{errorTransaction.errorTransactionDate}}</td>
+                    <td>{{errorTransaction.errorRefundDate}}</td>
+                    <td>{{errorTransaction.errorAmount}}</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
+
+<!-- Modal Period -->
+<!--<div style="color: black;" class="modal fade" id="myPeriodModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Vælg periode</h4>
+            </div>
+            <div class="modal-body">
+                <div class="graph-canvas">
+                    <div class="form-group">
+                        <p>Fra dato:</p>
+                        <div class='input-group date' id='datetimepickerFromTransactions'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group datepicker">
+                        <p>Til dato:</p>
+                        <div class='input-group date' id='datetimepickerToTransactions'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="ctrl.getTransactionData()" data-dismiss="modal">Hent data</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuller</button>
+            </div>
+        </div>
+    </div>
+</div>-->

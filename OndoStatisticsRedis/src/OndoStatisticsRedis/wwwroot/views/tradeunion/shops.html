@@ -1,0 +1,171 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <section class="boxInfoTradeUnion">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Transaktioner dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.transactionsCurrentQuarter}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Transaktioner denne uge: {{ctrl.transactionsCurrentWeek}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Oprettelser dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.subscriptionsCurrentQuarter}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Oprettelser denne uge: {{ctrl.subscriptionsCurrentWeek}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Aktivitet dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.activityCurrentQuarter}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Aktivitet denne uge: {{ctrl.activityCurrentWeek}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="boxTradeunion">
+                        <div class="boxHeaderTradeunion">
+                            <p>Points dette kvartal</p>
+                        </div>
+                        <div class="boxValueTradeunion">
+                            <div class="boxValueTradeunionFigures">
+                                <p><strong>{{ctrl.pointsCurrentQuarter}}</strong></p>
+                                <div class="boxValueTradeunionSubFigures">
+                                    <p>Points denne uge: {{ctrl.pointsCurrentWeek}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tablesForTradeUnion">
+            <h4>Liste over butikker i din by</h4>
+            <p>Tal er for dette kvartal - du kan ordne efter flest oprettelser, transaktioner og point ved at klikke på de pågældende tabelemner</p>
+            <div class="table-responsive">
+                <table class="table animate-repeat" id="tradeunionShopTableSection">
+                    <thead>
+                    <th>Butik <span style="margin-left: 15px;"><input ng-model="ctrl.categoryInput" placeholder="Søg efter butik"/></span></th>
+                    <th>Kategori <span style="margin-left: 15px;"><select ng-init="ctrl.categoryDropDown = ctrl.categories[0]" ng-model="ctrl.categoryDropDown" ng-options="x.title for x in ctrl.categories"></select></span></th>
+                    <th><p class="orderBy" ng-click="sortBy('subscriptionsQuarter')">Antal oprettelser <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'subscriptionsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'subscriptionsQuarter' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('transactionsQuarter')">Antal transaktioner <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'transactionsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'transactionsQuarter' && reverse === true"></span></p></th>
+                    <th><p class="orderBy" ng-click="sortBy('pointsQuarter')">Points <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'pointsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'pointsQuarter' && reverse === true"></span></p></th>
+                    </thead>
+                    <tr class="animate-repeat" ng-repeat="ondo in ctrl.ondoTransactionsData | filter: ctrl.categoryDropDown.value | filter: ctrl.categoryInput |orderBy:propertyName:!reverse track by $index">
+                        <td class="tableTitle" ng-click="ctrl.getAllOndoData(this)" data-toggle="modal" data-target="#myModalShops"><p>{{ondo.title}}</p></td>
+                        <td>{{ondo.category}}</td>
+                        <td>{{ondo.subscriptions}}</td>
+                        <td>{{ondo.transactions}}</td>
+                        <td>{{ondo.points}}</td>
+                    </tr>
+                </table>
+                <button class="btn btn-danger" ng-click="ctrl.printDataShop()">Print tabel</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div style="color: black;" class="modal fade" id="myModalShops" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{ctrl.viewOndo.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <section class="ModalBoxInfoTradeUnion">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Transaktioner dette kvartal</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.transactions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Transaktioner denne uge</p>
+                                </div>
+                                <div class="modalBoxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.weeksArray[0].transactions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Oprettelser dette kvartal</p>
+                                </div>
+                                <div class="modalBoxValueTradeunion">
+                                    <div class="boxValueTradeunionFigures">
+                                        <p><strong>{{ctrl.viewOndo.subscriptions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Oprettelser denne uge</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.weeksArray[0].subscriptions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hidden-xs">
+                    <div class="modalGraphContent">
+                        <p>Aktivitet dette kvartal</p>
+                        <div id="modalGraph">
+                            <canvas id="modal-line-graph" width="350" height="140"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Luk</button>
+            </div>
+        </div>
+    </div>
+</div>

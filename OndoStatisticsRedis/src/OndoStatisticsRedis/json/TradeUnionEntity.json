@@ -1,0 +1,348 @@
+{
+"ondoId" : 10112,
+"title" : "Møn Tilbud",
+"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg",
+"transactionsQuarter" : 395,
+"transactionsWeekShops" : 9,
+"subscriptionsQuarter" : 123,
+"subscriptionsQuarterShops" : 113,
+"subscriptionsQuarterClubs" : 10,
+"subscriptionsWeekShops" : 2,
+"activityQuarter" : 518,
+"activityQuarterShops" : 508,
+"activityWeekShops" : 11,
+"pointsQuarter" : 4551,
+"pointsWeekShops" : 139,
+"topFiveShops" : [
+	{
+		"title": "SuperBrugsen Lendemark",
+		"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg"
+	},
+	{
+		"title": "SuperBrugsen",
+		"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg"
+	},
+	{
+		"title": "SuperBrugsen",
+		"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg"
+	},
+	{
+		"title": "SuperBrugsen",
+		"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg"
+	},
+	{
+		"title": "SuperBrugsen",
+		"profilePicture" : "https://ondodotsservice.blob.core.windows.net/profile/dd71876a-15a3-448f-9901-811909059418.jpg"
+	}
+],
+"weeksArrayQuarter" : [
+	{
+		"weekLabel" : "Uge 39",
+		"subscriptions" : 9,
+		"transactions" : 14,
+		"activity" : 23
+	},
+	{
+		"weekLabel" : "Uge 40",
+		"subscriptions" : 12,
+		"transactions" : 23,
+		"activity" : 23
+	},
+	{
+		"weekLabel" : "Uge 41",
+		"subscriptions" : 41,
+		"transactions" : 14,
+		"activity" : 23
+	},
+	{
+		"weekLabel" : "Uge 42",
+		"subscriptions" : 2,
+		"transactions" : 5,
+		"activity" : 23
+	}
+],
+"cardUsersQuarter" : 1497,
+"cardUsersQuarterPercent" : 100,
+"activeCardUsersQuarter" : 263,
+"activeCardUsersQuarterPercent" : 18,
+"inactiveCardUsersQuarter" : 1241,
+"inactiveCardUsersQuarterPercent" : 82,
+"appUsersQuarter" : 606,
+"appUsersQuarterPercent" : 40,
+"cardUsersWithNoClub" : 261,
+"cardUsersWithNoClubPercent" : 17,
+"pointsToClubs" : 4415,
+"pointsNoClubs" : 565,
+"appUsersQuarterInCity" : 529,
+"cardUsersQuarterInCity" : 1240,
+"activeCardUsersQuarterInCity" : 235,
+"inactiveCardUsersQuarterInCity" : 1005,
+"clubsCountWithSubscriptions" : 10,
+"shops" : [
+	{
+		"title" : "SuperBrugsen Lendemark",
+		"category" : "Dagligvarer",
+		"transactions" : 23,
+		"subscriptions" : 3,
+		"points" : 2134,
+		"weeksArray" : [
+			{
+				"weekLabel" : "Uge 39",
+				"subscriptions" : 9,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 40",
+				"subscriptions" : 12,
+				"transactions" : 23,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 41",
+				"subscriptions" : 41,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 42",
+				"subscriptions" : 2,
+				"transactions" : 5,
+				"activity" : 23
+			}
+		]
+	},
+	{
+		"title" : "Bøger og Papir Stege",
+		"category" : "Sport, Hobby & Fritid",
+		"transactions" : 42,
+		"subscriptions" : 23,
+		"points" : 1200,
+		"weeksArray" : [
+			{
+				"weekLabel" : "Uge 39",
+				"subscriptions" : 9,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 40",
+				"subscriptions" : 12,
+				"transactions" : 23,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 41",
+				"subscriptions" : 41,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 42",
+				"subscriptions" : 2,
+				"transactions" : 5,
+				"activity" : 23
+			}
+		]
+	},
+	{
+		"title" : "Domiciel Stege",
+		"category" : "Dagligvarer",
+		"transactions" : 54,
+		"subscriptions" : 22,
+		"points" : 430,
+		"weeksArray" : [
+			{
+				"weekLabel" : "Uge 39",
+				"subscriptions" : 9,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 40",
+				"subscriptions" : 12,
+				"transactions" : 23,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 41",
+				"subscriptions" : 41,
+				"transactions" : 14,
+				"activity" : 23
+			},
+			{
+				"weekLabel" : "Uge 42",
+				"subscriptions" : 2,
+				"transactions" : 5,
+				"activity" : 23
+			}
+		]
+	}
+],
+"clubs" : [
+	{
+		"title" : "Mon Dans",
+		"points" : 1118,
+		"appUsers" : 80,
+		"cardUsers" : 181,
+		"activeCardUsers" : 57,
+		"inactiveCardUsers" : 124,
+		"subscriptions" : 0
+	},
+	{
+		"title" : "Mon Gruppen DDS",
+		"points" : 627,
+		"appUsers" : 43,
+		"cardUsers" : 83,
+		"activeCardUsers" : 28,
+		"inactiveCardUsers" : 55,
+		"subscriptions" : 0
+	},
+	{
+		"title" : "OstMon FK",
+		"points" : 442,
+		"appUsers" : 45,
+		"cardUsers" : 92,
+		"activeCardUsers" : 19,
+		"inactiveCardUsers" : 73,
+		"subscriptions" : 1
+	}
+],
+"history" : [
+	{
+		"quarterLabel" : "3. Kvartal 2016",
+		"subscriptions" : 466,
+		"transactions" : 534,
+		"points" : 8120,
+		"shops" : [
+			{
+				"title" : "SuperBrugsen Lendemark",
+				"category" : "Dagligvarer",
+				"transactions" : 23,
+				"subscriptions" : 3,
+				"points" : 2134,
+				"weeksArray" : [
+					{
+						"weekLabel" : "Uge 39",
+						"subscriptions" : 9,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 40",
+						"subscriptions" : 12,
+						"transactions" : 23,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 41",
+						"subscriptions" : 41,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 42",
+						"subscriptions" : 2,
+						"transactions" : 5,
+						"activity" : 23
+					}
+				]
+			},
+			{
+				"title" : "Bøger og Papir Stege",
+				"category" : "Sport, Hobby & Fritid",
+				"transactions" : 42,
+				"subscriptions" : 23,
+				"points" : 1200,
+				"weeksArray" : [
+					{
+						"weekLabel" : "Uge 39",
+						"subscriptions" : 9,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 40",
+						"subscriptions" : 12,
+						"transactions" : 23,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 41",
+						"subscriptions" : 41,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 42",
+						"subscriptions" : 2,
+						"transactions" : 5,
+						"activity" : 23
+					}
+				]
+			},
+			{
+				"title" : "Domiciel Stege",
+				"category" : "Dagligvarer",
+				"transactions" : 54,
+				"subscriptions" : 22,
+				"points" : 430,
+				"weeksArray" : [
+					{
+						"weekLabel" : "Uge 39",
+						"subscriptions" : 9,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 40",
+						"subscriptions" : 12,
+						"transactions" : 23,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 41",
+						"subscriptions" : 41,
+						"transactions" : 14,
+						"activity" : 23
+					},
+					{
+						"weekLabel" : "Uge 42",
+						"subscriptions" : 2,
+						"transactions" : 5,
+						"activity" : 23
+					}
+				]
+			}
+		]
+	}
+],
+"userHistory" : [
+	{
+		"quarterLabel" : "3. Kvartal 2016",
+		"cardUsers" : 1148,
+		"cardUsersPercent" : 100,
+		"activeCardUsers" : 324,
+		"activeCardUsersPercent" : 28,
+		"inactiveCardUsers" : 824,
+		"inactiveCardUsersPercent" : 72,
+		"appUsers" : 479,
+		"appUsersPercent" : 42,
+		"cardUsersWithNoClub" : 232,
+		"cardUsersWithNoClubPercent" : 20
+	},
+	{
+		"quarterLabel" : "2. Kvartal 2016",
+		"cardUsers" : 1122,
+		"cardUsersPercent" : 100,
+		"activeCardUsers" : 304,
+		"activeCardUsersPercent" : 28,
+		"inactiveCardUsers" : 824,
+		"inactiveCardUsersPercent" : 72,
+		"appUsers" : 200,
+		"appUsersPercent" : 30,
+		"cardUsersWithNoClub" : 20,
+		"cardUsersWithNoClubPercent" : 10
+	}
+]
+}

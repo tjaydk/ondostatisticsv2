@@ -1,0 +1,42 @@
+﻿<navbar-side></navbar-side>
+<div class="viewShop">
+    <div class="mainContent">
+        <header>
+            <h4>Her kan du se historisk data omkring oprettelser, transaktioner samt point.</h4>
+            <p>Du kan hente data 3 år bagud fra sidste kvartal.</p>
+        </header>
+        <section class="row">
+            <div class="historyGraphSelect col-md-4 col-sm-4">
+                <p style="cursor: pointer; display: inline-block;" ng-click="kvartaller = !kvartaller">Vælg hvilke kvartaller du ønsker at se data fra</p>
+                <div>
+                    <select id="quarterSelect" multiple>
+                        <option ng-repeat="quarter in ctrl.quarters">{{quarter}}</option>
+                    </select>
+                    <br />
+                    <button id="getHistoryDataBtn" style="margin-right: 20px;" class="btn btn-danger quarterSelectBtn" ng-click="ctrl.getHistoryData(); kvartaller = !kvartaller" disabled>Hent data</button>
+                </div>
+            </div>
+            <div class="historyGraphElement">
+                <div class="historyGraph col-md-8 col-sm-8">
+                    <div class="historyGraphOverlay"></div>
+                    <div class="graph text-center">
+                        <p>Tableoversigt over valgte kvartaler</p>
+                        <canvas id="bar-transactions-history" width="400" height="180"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="historyTableHeaderElement">
+                <h4 class="historyTableHeaderHeader">Graf for specifikt kvartal</h4>
+                <div id="quarterHistoryShopSelector"><select id="quarterForShopDropDown" ng-init="ctrl.quarter = ctrl.quartersSelected[0]" ng-model="ctrl.quarter" ng-options="q for q in ctrl.quartersSelected"><option value="" disabled selected>Vælg kvartal</option></select></div>
+                <section class="hidden-xs">
+                        <p>Aktivitet dette kvartal</p>
+                        <div id="shopGraphHistory">
+                            <canvas id="line-transactions-shop-history" width="350" height="140"></canvas>
+                        </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>

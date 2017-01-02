@@ -1,0 +1,44 @@
+﻿<div class="chooseOndoView">
+    <header>
+        <h1>Din oversigt</h1>
+        <p>Her kan du se en liste over dine aktiviteter - tryk på et ikon for at komme til en specifik oversigt</p>
+    </header>
+
+    <section class="ondoList">
+        <div class="row text-center">
+            <div id="tradeUnionList"></div>
+            <div ng-repeat="ondo in ctrl.tradeUnions track by $index" class="ondoButton">
+                <div class="ondoListIcon col-md-2 col-sm-4" ng-click="ctrl.goToView(this)">
+                    <div class="ondoListIconImage">
+                        <img src="{{ondo.profilePicture}}" alt="" />
+                    </div>
+                    <p>{{ondo.title}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div id="shopList"></div>
+            <div ng-repeat="ondo in ctrl.shops track by $index" class="ondoButton">
+                <div class="ondoListIcon col-md-2 col-sm-4" ng-click="ctrl.goToView(this)">
+                    <div class="ondoListIconImage">
+                        <img src="{{ondo.profilePicture}}" alt="" />
+                    </div>
+                    <p>{{ondo.title}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div id="clubList"></div>
+            <div ng-repeat="ondo in ctrl.clubs track by $index" class="ondoButton">
+                <div class="ondoListIcon col-md-2 col-sm-4" ng-click="ctrl.goToView(this)">
+                    <div class="ondoListIconImage">
+                        <img src="{{ondo.profilePicture}}" alt="" />
+                    </div>
+                    <p>{{ondo.title}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

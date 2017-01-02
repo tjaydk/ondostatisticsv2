@@ -1,0 +1,57 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <section>
+            <h4>Her kan du se information omkring oprettelser</h4>
+            <p>Du kan se hvor mange oprettelser der er lavet i de forskellige butikker indenfor en given periode</p>
+
+        </section>
+        <section>
+            <p>Periode: {{ctrl.period}}<span id="periodModalPicker" data-toggle="modal" data-target="#myPeriodModal" hidden>vælg periode</span></p>
+            <div class="graph hidden-sm hidden-xs">
+                <canvas id="bar-subscriptions-shops" width="400" height="180"></canvas>
+            </div>
+            <div class="visible-sm visible-xs">
+                <canvas id="bar-subscriptions-shops-small" width="180" height="400"></canvas>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <!-- Modal Period -->
+    <!--<div style="color: black;" class="modal fade" id="myPeriodModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Vælg periode</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="graph-canvas">
+                        <div class="form-group">
+                            <p>Fra dato:</p>
+                            <div class='input-group date' id='datetimepickerFromSubscriptions'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="fa fa-calendar-o"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group datepicker">
+                            <p>Til dato:</p>
+                            <div class='input-group date' id='datetimepickerToSubscriptions'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="fa fa-calendar-o"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="ctrl.getTransactionData()" data-dismiss="modal">Hent data</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >Annuller</button>
+                </div>
+            </div>
+        </div>
+    </div>-->

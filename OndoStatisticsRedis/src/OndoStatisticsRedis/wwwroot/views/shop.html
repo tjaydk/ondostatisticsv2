@@ -1,0 +1,128 @@
+﻿<!--SHOP VIEW-->
+    <div class="viewShop">
+        <navbar-side></navbar-side>
+
+        <div class="mainContent">
+            <section class="boxInfoShop">
+                <div class="row">
+                    <div class="col-md-3 visible-sm visible-xs">
+                        <div class="boxShop">
+                            <div class="boxHeaderShop">
+                                <p>Points</p>
+                            </div>
+                            <div class="boxValueShop">
+                                <p><strong>{{ctrl.pointsCurrentQuarter}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxShop">
+                            <div class="boxHeaderShop">
+                                <p>Transaktioner dette kvartal</p>
+                            </div>
+                            <div class="boxValueShop">
+                                <p><strong>{{ctrl.transactionsInShopCurrentQuarter}}</strong></p>
+                                <p class="cityNumbers">Byen: {{ctrl.transactionsForCityCurrentQuarter}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxShop">
+                            <div class="boxHeaderShop">
+                                <p>Transaktioner denne uge</p>
+                            </div>
+                            <div class="boxValueShop">
+                                <p><strong>{{ctrl.transactionsInShopCurrentWeek}}</strong></p>
+                                <p class="cityNumbers">Byen: {{ctrl.transactionsForCityCurrentWeek}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxShop">
+                            <div class="boxHeaderShop">
+                                <p>Oprettelser dette kvartal</p>
+                            </div>
+                            <div class="boxValueShop">
+                                <p><strong>{{ctrl.creationsInShopCurrentQuarter}}</strong></p>
+                                <p class="cityNumbers">Byen: {{ctrl.subscriptionsForCityCurrentQuarter}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="boxShop">
+                            <div class="boxHeaderShop">
+                                <p>Oprettelser denne uge</p>
+                            </div>
+                            <div class="boxValueShop">
+                                <p><strong>{{ctrl.creationsInShopCurrentWeek}}</strong></p>
+                                <p class="cityNumbers">Byen: {{ctrl.subscriptionsForCityCurrentWeek}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clubGraphContent">
+                <div class="clubHistoryGraph col-md-8 hidden-xs" id="clubHistoryGraph">
+                    <h4>Aktivitet dette kvartal</h4>
+                    <ul class="list-unstyled">
+                        <canvas id="line-transactions-shop" width="350" height="140"></canvas>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="shopsSideData">
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <div class="topShopsTable hidden-sm hidden-xs">
+                                    <h4 style="margin-bottom: -10px;">Points</h4>
+                                    <h4 style="font-size: 52px;">{{ctrl.pointsCurrentQuarter}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="topShopsTable" id="topShopsAvarage">
+                                    <h4 style="margin-bottom: -10px;">Uge:</h4>
+                                    <h4 style="font-size: 52px;">{{ctrl.currentWeek}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row weeklyStatsShop">
+                            <div class="weeklyStatsShopAgainstLastWeek text-center row">
+                                <h4>Sidste uges tal</h4>
+                                <h5 class="weeklyStatsHeader">I forhold til forrige uge</h5>
+                                <div class="col-md-6">
+                                    <p>Oprettelser</p>
+                                    <i id="subsAgainstWeek" style="font-size: 25px;" class="fa" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Transaktioner</p>
+                                    <i id="transAgainstWeek" style="font-size: 25px;" class="fa" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="weeklyStatsShopAgainstQuarter text-center row">
+                                <h5 class="weeklyStatsHeader">I forhold til kvartalsgennemsnit</h5>
+                                <div class="col-md-6">
+                                    <p>Oprettelser</p>
+                                    <i id="subsAgainstQuart" style="font-size: 25px;" class="fa" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Transaktioner</p>
+                                    <i id="transAgainstQuart" style="font-size: 25px;" class="fa" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="shopText">
+                <div class="userInfoBar">
+                    <p>Tips</p>
+                </div>
+                <div class="shopInfoText">
+                    <ul class="list-unstyled">
+                        <li><p>- Husk altid at spørge dine kunder om de er med i LokalFordele, hvis de er ved at købe en vare der giver bonus.</p></li>
+                        <li><p>- Husk at skilte tydeligt i butikken og ved kassen at du er med i LokalFordele og hvordan kunderne optjener bonus til deres klub / forening i din butik.</p></li>
+                        <li><p>- Husk altid at skilte med dine aktuelle LokalTilbud og de særlige fordele de giver dine kunder.</p></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>

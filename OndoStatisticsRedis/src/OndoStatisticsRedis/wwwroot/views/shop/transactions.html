@@ -1,0 +1,53 @@
+﻿<div class="viewShop">
+    <navbar-side></navbar-side>
+    <div class="mainContent">
+        <section class="transaction-header animated fadeInDown">
+            <h3>Her kan du se en statistik over alle transaktioner i butikken</h3>
+        </section>
+        <section class="transactions-graph">
+            <div class="col-md-12">
+                <h4>Graf over antal transaktioner dette kvartal på daglig basis </h4>
+                <div class="background-padding">
+                    <div class="graph-canvas">
+                        <canvas id="line-transactions-shop-menu" width="600" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5 hidden">
+                <h4>Filtre</h4>
+                <div class="background-padding">
+                    <div class="graph-canvas">
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepickerFromShopTransactions'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="fa fa-calendar-o"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group datepicker">
+                            <div class='input-group date' id='datetimepickerToShopTransactions'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="fa fa-calendar-o"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" ng-click="ctrl.getTransactionData()">Get data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="transaction-table" hidden>
+            <div class="col-md-12">
+                <h4 align="center">Tabel over alle transaktioner i perioden </h4>
+                <div class="background-padding">
+                    <div class="table-display">
+                        <table id="transactionTable" class="table table-striped"></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

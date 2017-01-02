@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html ng-app="ondoApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokal Fordele Statistik v2</title>
+    <link rel="icon" href="~/images/favicon.png" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="~/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/animate.css" rel="stylesheet" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="~/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/animate.css" rel="stylesheet" />
+    </environment>
+</head>
+<body>
+    <div class="container body-content">
+        @*RENDER ANGULAR VIEW*@
+        @RenderBody()
+        </div>
+        <!--Loading directive-->
+        <loading></loading>
+
+        <environment names="Development">
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/lib/moment/min/moment.min.js"></script>
+
+            @*CHARTJS*@
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
+
+            @*TOGGLES*@
+            <script src="~/js/toggles/toggles.js"></script>
+
+            @*BOOTSTRAP PROGRESSBAR*@
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+
+            @*ANGULAR*@
+            <script src="~/js/angular.min.js"></script>
+            <script src="~/js/angular-route.min.js"></script>
+
+            @*DIRECTIVES*@
+            <script src="~/directives/loading.js"></script>
+            <script src="~/directives/navbarSide.js"></script>
+            <script src="~/directives/navBarSideTrade.js"></script>
+
+            @*ANGULAR APP*@
+            <script src="~/js/site.js"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/lib/moment/min/moment.min.js"></script>
+
+            @*CHARTJS*@
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
+
+            @*TOGGLES*@
+            <script src="~/js/toggles/toggles.js"></script>
+
+            @*BOOTSTRAP PROGRESSBAR*@
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+
+            @*ANGULAR*@
+            <script src="~/js/angular.min.js"></script>
+            <script src="~/js/angular-route.min.js"></script>
+
+            @*DIRECTIVES*@
+            <script src="~/directives/loading.js"></script>
+            <script src="~/directives/navbarSide.js"></script>
+            <script src="~/directives/navBarSideTrade.js"></script>
+
+            @*ANGULAR APP*@
+            <script src="~/js/site.min.js"></script>
+        </environment>
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>

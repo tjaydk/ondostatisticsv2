@@ -1,0 +1,24 @@
+﻿<div class="backgroundElementLogin"></div>
+<div class="loginView">
+    <div class="loginContent animated fadeIn">
+        <header class="text-center" style="color: white;">
+            <h1>LokalFordele Statistik</h1>
+            <p>Indtast email og kodeord for at logge ind</p>
+            <p>{{ctrl.errorMsg}}</p>
+        </header>
+        <section id="errorMessage" class="text-center" style="color: white;">
+            <div id="errorText"></div>
+        </section>
+
+        <section class="loginModule text-center">
+            <form class="loginForm">
+                <input type="text" placeholder="Indtast brugernavn" ng-model="ctrl.username" required /><br /> <!-- DETTE SKAL ANDRES I CSS -->
+                <input type="password" placeholder="Indtast adgangskode" ng-model="ctrl.password" required /><br />
+                <button class="btn btn-frost" ng-click="ctrl.login()">Log ind</button>
+            </form>
+        </section>
+    </div>
+    <footer class="footer text-center" hidden>
+        <p><i class="fa fa-copyright"></i> Copyright by Ondodots {{thisYear}}</p>
+    </footer>
+</div>

@@ -1,0 +1,119 @@
+﻿<navbar-side-trade></navbar-side-trade>
+<div class="viewTradeUnion">
+    <div class="mainContent">
+        <header>
+            <h4>Her kan du se historisk data omkring oprettelser, transaktioner samt point.</h4>
+            <p>Du kan hente data 3 år bagud fra sidste kvartal.</p>
+        </header>
+        <section class="row">
+            <div class="historyGraphSelect col-md-4 col-sm-4">
+                <p style="cursor: pointer; display: inline-block;" ng-click="kvartaller = !kvartaller">Vælg hvilke kvartaller du ønsker at se data fra</p>
+                <div>
+                    <select id="quarterSelect" multiple>
+                        <option ng-repeat="quarter in ctrl.quarters">{{quarter}}</option>
+                    </select>
+                    <br />
+                    <button id="getHistoryDataBtn" style="margin-right: 20px;" class="btn btn-danger quarterSelectBtn" ng-click="ctrl.getHistoryData(); kvartaller = !kvartaller" disabled>Hent data</button>
+                </div>
+            </div>
+            <div class="historyGraphElement">
+                <div class="historyGraph col-md-8 col-sm-8">
+                    <div class="historyGraphOverlay"></div>
+                    <div class="graph text-center">
+                        <p>Totaloversigt for alle butikker</p>
+                        <canvas id="bar-transactions-history" width="400" height="180"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="historyTableHeaderElement">
+                <h4 class="historyTableHeaderHeader">Tabel med data for de specifikke butikker</h4>
+                <div id="quarterHistoryShopSelector"><select id="quarterForShopDropDown" ng-init="ctrl.quarter = ctrl.quartersSelected[0]" ng-model="ctrl.quarter" ng-options="q for q in ctrl.quartersSelected"><option value="" disabled selected>Vælg kvartal</option></select></div>
+                <div class="table-responsive">
+                    <table class="table animate-repeat">
+                        <thead>
+                            <th>Butik <span style="margin-left: 15px;"><input ng-model="ctrl.categoryInput" placeholder="Søg efter butik" /></span></th>
+                            <th>Kategori <span style="margin-left: 15px;"><select ng-init="ctrl.categoryDropDown = ctrl.categories[0]" ng-model="ctrl.categoryDropDown" ng-options="x.title for x in ctrl.categories"></select></span></th>
+                            <th><p class="orderBy" ng-click="sortBy('subscriptionsQuarter')">Antal oprettelser <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'subscriptionsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'subscriptionsQuarter' && reverse === true"></span></p></th>
+                            <th><p class="orderBy" ng-click="sortBy('transactionsQuarter')">Antal transaktioner <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'transactionsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'transactionsQuarter' && reverse === true"></span></p></th>
+                            <th><p class="orderBy" ng-click="sortBy('pointsQuarter')">Points <span class="sortorder fa fa-caret-up" ng-show="propertyName === 'pointsQuarter' && reverse === false"></span><span class="sortorder fa fa-caret-down" ng-show="propertyName === 'pointsQuarter' && reverse === true"></span></p></th>
+                        </thead>
+                        <tr class="animate-repeat" ng-repeat="ondo in ctrl.ondoTransactionsData | filter: ctrl.categoryDropDown.value | filter: ctrl.categoryInput |orderBy:propertyName:!reverse track by $index">
+                            <td class="tableTitle" ng-click="ctrl.getAllOndoData(this)" data-toggle="modal" data-target="#myModalShops"><p>{{ondo.title}}</p></td>
+                            <td>{{ondo.category}}</td>
+                            <td>{{ondo.subscriptions}}</td>
+                            <td>{{ondo.transactions}}</td>
+                            <td>{{ondo.points}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Modal -->
+<div style="color: black;" class="modal fade" id="myModalShops" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{ctrl.viewOndo.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <section class="ModalBoxInfoTradeUnion">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Transaktioner for kvartal</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.transactions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Oprettelser for kvartal</p>
+                                </div>
+                                <div class="modalBoxValueTradeunion">
+                                    <div class="boxValueTradeunionFigures">
+                                        <p><strong>{{ctrl.viewOndo.subscriptions}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="modalBoxTradeunion">
+                                <div class="modalBoxHeaderTradeunion">
+                                    <p>Points for kvartal</p>
+                                </div>
+                                <div class="boxValueTradeunion">
+                                    <div class="modalBoxValueTradeunion">
+                                        <p><strong>{{ctrl.viewOndo.points}}</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hidden-xs">
+                    <div class="modalGraphContent">
+                        <p>Aktivitet dette kvartal</p>
+                        <div id="modalGraphHistory">
+                            <canvas id="modal-line-graph-history" width="350" height="140"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Luk</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1529 @@
+﻿/*CSS FOR BODY*/
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    background-color: white !important;
+    font-family: 'Dosis', sans-serif!important;
+}
+
+
+/*CSS FOR LOADING*/
+
+#loading {
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 100;
+    opacity: 1;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+.loadingContent {
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
+}
+
+#loadingText {
+    color: white;
+    opacity: .8;
+}
+
+#loadingGif {
+    opacity: .2;
+}
+
+#cancelLoad {
+    cursor: pointer;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    #cancelLoad:hover {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.19);
+    }
+
+
+/*CSS FOR LOGIN VIEWY*/
+
+.loginView {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+
+.loginContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+    .loginContent input {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .2);
+        color: white;
+        font-size: 16px;
+    }
+
+    .loginContent .btn-frost {
+        width: 280px;
+        height: 35px;
+        margin: 5px;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, .7);
+        color: white;
+        padding-left: 15px;
+        font-size: 16px;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+        .loginContent .btn-frost:hover {
+            background-color: rgba(0, 0, 0, .8);
+            color: white;
+        }
+
+    .loginContent input::-webkit-input-placeholder {
+        color: white;
+    }
+
+
+/*CSS FOR SIDE NAVBAR*/
+
+.sideNavBar {
+    position: fixed;
+    height: 100%;
+    width: 220px;
+    top: 0px;
+    left: 0px;
+    background-color: #525252;
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    z-index: 10;
+}
+
+
+    .sideNavBar #sideNavBarShopInfo {
+        text-align: center;
+        margin-top: 50px;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar #profilePicture {
+        width: 90px;
+        border-radius: 45px;
+        overflow: hidden;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar #shopTitle {
+        text-transform: uppercase;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar #sideNavBarToggle {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        font-size: 30px;
+        display: none;
+        opacity: .8;
+        cursor: pointer;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+        .sideNavBar #sideNavBarToggle:hover {
+            opacity: 1;
+        }
+
+    .sideNavBar #sideNavBarList {
+        list-style-type: none;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+
+    .sideNavBar .sideNavBarLink a {
+        display: inline-block;
+        margin-left: -25px;
+        padding-left: 20px;
+        padding-top: 7px;
+        width: 220px;
+        height: 40px;
+        color: white;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        border-bottom: 1px solid #676767;
+    }
+
+        .sideNavBar .sideNavBarLink a:hover {
+            background-color: rgb(105, 104, 104);
+            text-decoration: none;
+        }
+
+.navBarIcon {
+    margin-right: 20px;
+}
+
+.sideNavBar .ondoDropDown {
+    color: white;
+    margin-left: -2px;
+}
+
+    .sideNavBar .ondoDropDown p {
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .sideNavBar .ondoDropDown select {
+        width: 200px;
+        height: 30px;
+        background-color: rgba(0,0,0,.2);
+        border: none;
+        border-radius: 15px;
+        padding-left: 10px;
+        padding-right: 20px;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+        .sideNavBar .ondoDropDown select:hover {
+            background-color: rgba(0,0,0,.5);
+        }
+
+
+        .sideNavBar .ondoDropDown select:focus {
+            outline: 0px;
+        }
+
+    .sideNavBar .ondoDropDown option {
+        background-color: rgba(0,0,0,.5);
+    }
+
+
+
+/*CSS FOR SIDE NAVBAR TOGGLED*/
+
+.sideNavBar-toggle {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    display: block;
+    z-index: 10;
+}
+
+
+    .sideNavBar-toggle #sideNavBarShopInfo {
+        text-align: center;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar-toggle #profilePicture {
+        width: 90px;
+        border-radius: 45px;
+        overflow: hidden;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar-toggle #shopTitle {
+        text-transform: uppercase;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar-toggle #shopLocality {
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    .sideNavBar-toggle #sideNavBarToggle {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        font-size: 30px;
+        display: block;
+        opacity: .8;
+        cursor: pointer;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+        .sideNavBar-toggle #sideNavBarToggle:hover {
+            opacity: 1;
+        }
+
+    .sideNavBar-toggle .sideNavBarListSection {
+        text-align: center;
+    }
+
+    .sideNavBar-toggle #sideNavBarList {
+        position: absolute;
+        display: inline-block;
+        width: 270px;
+        list-style-type: none;
+        text-align: left;
+        font-size: 30px;
+        font-weight: 500;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        -webkit-transform: translate(-50%, 30%);
+        -moz-transform: translate(-50%, 30%);
+        -ms-transform: translate(-50%, 30%);
+        -o-transform: translate(-50%, 30%);
+        transform: translate(-50%, 30%);
+    }
+
+    .sideNavBar-toggle .sideNavBarLink a {
+        color: white;
+    }
+
+    .sideNavBar-toggle .ondoDropDown {
+        color: white;
+        margin-left: 0px;
+        display: block;
+        text-align: left;
+    }
+
+        .sideNavBar-toggle .ondoDropDown p {
+            display: none;
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+
+        .sideNavBar-toggle .ondoDropDown select {
+            width: 200px;
+            height: 30px;
+            background-color: rgba(0,0,0,.2);
+            border: none;
+            border-radius: 15px;
+            padding-left: 10px;
+            padding-right: 20px;
+            -webkit-transition: .2s all ease;
+            -moz-transition: .2s all ease;
+            -o-transition: .2s all ease;
+            transition: .2s all ease;
+            font-size: 20px;
+        }
+
+            .sideNavBar-toggle .ondoDropDown select:hover {
+                background-color: rgba(0,0,0,.5);
+            }
+
+
+            .sideNavBar-toggle .ondoDropDown select:focus {
+                outline: 0px;
+            }
+
+        .sideNavBar-toggle .ondoDropDown option {
+            background-color: black;
+        }
+
+
+/*CSS FOR CHOOSE ONDO VIEW*/
+
+.chooseOndoView {
+    color: black;
+}
+
+.ondoList {
+    margin-top: 40px;
+}
+
+.chooseHeader {
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: grey;
+    color: white;
+    padding-top: 5px;
+}
+
+.ondoListIcon {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    opacity: .8;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    .ondoListIcon p {
+        padding-top: 10px;
+    }
+
+    .ondoListIcon:hover {
+        opacity: 1;
+    }
+
+    .ondoListIcon .ondoListIconImage {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        border-radius: 40px;
+        margin-bottom: -10px;
+    }
+
+        .ondoListIcon .ondoListIconImage img {
+            width: auto;
+            height: 100%;
+            -webkit-transition: .4s all ease;
+            -moz-transition: .4s all ease;
+            -o-transition: .4s all ease;
+            transition: .4s all ease;
+        }
+
+/*CSS FOR CLUB VIEW*/
+
+.clubContent {
+    margin-top: -40px;
+    color: black !important;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+.userDataBox {
+    text-align: right;
+}
+
+.userData {
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.profilePicture img {
+    height: 70px;
+    border-radius: 55px;
+}
+
+
+/*css for boxes*/
+
+.boxInfoClub {
+    margin-top: 10px;
+}
+
+.boxClub {
+    width: 100%;
+    height: 120px;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    cursor: pointer;
+    color: black;
+}
+
+#boxOne {
+    background-color: rgba(54, 162, 235, .2);
+    border: 1px solid;
+    border-color: rgba(54, 162, 235, 1);
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+
+#boxTwo {
+    background-color: rgba(255, 206, 86, .2);
+    border: 1px solid rgba(255, 206, 86, 1);
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+#boxThree {
+    background-color: rgba(255, 99, 132, .2);
+    border: 1px solid rgba(255, 99, 132, 1);
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+
+#boxFour {
+    background-color: rgba(92, 197, 13, .2);
+    border: 1px solid rgba(92, 197, 13, 1);
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+
+#whyZeroInHistoryTextValue {
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+
+.boxHeaderClub {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.boxValueClubFigures {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 52px;
+}
+
+.progressArrow {
+    font-size: 22px;
+}
+
+
+
+.doughnutChart {
+    display: inline-block;
+}
+
+/*css for graph element*/
+
+
+.clubGraphContent {
+    margin-top: 20px;
+    height: 400px;
+}
+
+.clubHistoryGraphElementText {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.clubHistoryGraph {
+    height: 89.7%;
+    margin-top: 19px;
+    border: 1px solid gainsboro;
+}
+
+
+#line-points-club {
+    margin-top: 45px;
+    margin-left: 0px;
+}
+
+.progress-bar {
+    font-size: 15px;
+}
+
+#progressBarIndicators {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.targetBarText {
+    position: absolute;
+    right: 52px;
+}
+
+#clubHistoryGraphElement0 {
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#clubHistoryGraphElement1 {
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#clubHistoryGraphElement2 {
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#clubHistoryGraphElement3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#clubHistoryGraphElement4 {
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+
+#bar-history-club {
+    margin-top: 45px;
+    margin-left: 0px;
+}
+
+
+
+/*css for side boxes*/
+
+.frontElementSide {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    width: 90%;
+}
+
+.backElementSide {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.clubHistoryInfo {
+    margin-top: 18px;
+    padding-right: 0px;
+}
+
+.clubHistoryInfoBox {
+    text-align: center;
+    height: 180px;
+    background-color: rgba(0,0,0,.03);
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    cursor: pointer;
+}
+
+.miniChart {
+    font-size: 250px;
+    position: absolute;
+    left: -30px;
+    top: -180px;
+    transform: rotate(-5deg);
+    opacity: .1;
+}
+
+
+.clubHistoryInfoBox p {
+    font-size: 14px;
+}
+
+.clubHistoryInfoBox:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+#clubHistoryGraphElement6 {
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+/*css for individual sideboxes*/
+
+#clubHistoryInfoBox0 {
+    background-color: white;
+    color: black;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    overflow: hidden;
+}
+
+
+    #clubHistoryInfoBox0:hover {
+        background-color: #f3f3f3;
+    }
+
+#clubHistoryInfoBox1 {
+    background-color: #7131c5;
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    #clubHistoryInfoBox1:hover {
+        background-color: blueviolet;
+    }
+
+#clubHistoryInfoBox2 {
+    background-color: #9fed64;
+    background-image: url(../images/regnskab.jpg);
+    background-position: center, center;
+    overflow: hidden;
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    #clubHistoryInfoBox2:hover {
+        background-color: #7cce3e;
+        background-image: none;
+    }
+
+#clubHistoryInfoBox3 {
+    background-color: #d85b5b;
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    margin-bottom: 50px;
+}
+
+    #clubHistoryInfoBox3:hover {
+        background-color: #7131c5;
+    }
+
+/*css for footer*/
+
+#clubFooter {
+    position: fixed !important;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(237, 20, 61, 0.84);
+    color: white;
+    text-align: right;
+    z-index: 50;
+}
+
+.footerMenu {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+#footerMenuIcon {
+    cursor: pointer;
+    transition: .2s all ease;
+}
+
+#footerMenuIconText {
+    font-size: 14px;
+    margin-right: 20px;
+    margin-top: -10px;
+    opacity: 0;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+
+#logoutBtn {
+    display: inline-block;
+    opacity: .8;
+    cursor: pointer;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    #logoutBtn:hover {
+        opacity: 1;
+    }
+
+.progressbarsMobile {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+
+.backgroundElement {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: url(../images/backgroundGreen.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.backgroundElementLogin {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.toggle-slide {
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    direction: ltr;
+    text-align: center;
+}
+
+/*CSS FOR SHOP VIEW*/
+
+.viewShop {
+    color: black;
+}
+
+.mainContent {
+    margin-left: 120px;
+    width: 97%;
+}
+
+
+/*css for info boxes*/
+.boxInfoShop {
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    .boxInfoShop .boxShop {
+        width: 100%;
+        height: 120px;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        color: black;
+        background-color: rgba(210, 210, 210, 0.2);
+        border: 1px solid;
+        border-color: rgb(210, 210, 210);
+    }
+
+.boxHeaderShop {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.boxValueShop {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 52px;
+}
+
+
+.boxInfoShop .box:hover {
+    opacity: 1;
+}
+
+.boxInfoShop .boxIcon {
+    position: relative;
+    right: -10%;
+    top: -85px;
+    font-size: 55px;
+    opacity: .2;
+    display: inline-block;
+}
+
+.boxInfoShop .boxTitle {
+    font-weight: 400;
+    padding-left: 10px;
+    opacity: .8;
+}
+
+.boxInfoShop .boxValue {
+    margin-top: -20px;
+    font-size: 46px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.boxInfoShop .cityNumbers {
+    font-size: 16px;
+    margin-top: -20px;
+    opacity: .8;
+}
+
+.shopText {
+        margin-top: 0px
+}
+
+.shopInfoText {
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+
+/*css for charts*/
+.charts {
+    margin-top: 30px;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+    .charts hr {
+        opacity: .2;
+    }
+
+
+.weeklyStatsShop {
+    margin-left: 30px!important;
+}
+
+.weeklyStatsHeader {
+    font-size: 14px;
+    background: #545454;
+    color: white;
+    height: 25px;
+    padding-top: 3px;
+}
+
+.shopsSideData {
+    width: 100%;
+}
+
+/*CSS FOR TRADEUNION VIEW*/
+
+.viewTradeUnion {
+    color: black;
+}
+
+.tableTitle p {
+    cursor: pointer;
+}
+
+.orderBy {
+    cursor: pointer;
+}
+
+.graphShops {
+    margin-top: 30px;
+}
+
+
+/*css for top shops*/
+
+.topShopsTable {
+    margin-top: 30px;
+}
+
+    .topShopsTable .table tr {
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        border-top: 1px solid #dcdcdc;
+    }
+
+
+    .topShopsTable .table img {
+        margin-top: 0px;
+        height: 35px;
+        border-radius: 45px;
+        width: auto;
+    }
+
+.topShopTitle {
+    margin-top: 5px;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+
+
+.angular-google-map-container {
+    height: 400px;
+}
+
+/*css for tables*/
+.tablesForTradeUnion {
+    margin-top: 25px;
+}
+
+/*css for modal*/
+#myModal {
+    padding-right: 0px;
+}
+
+.modal-content {
+    z-index: 50;
+    background-color: ghostwhite;
+}
+
+.ModalBoxInfoTradeUnion {
+    margin-bottom: 20px;
+}
+
+.modalBoxInfoTradeUnion {
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+.modalBoxTradeunion {
+    width: 100%;
+    height: 100px;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    color: black;
+    background-color: rgba(140, 140, 140, 0.2);
+    border: 1px solid;
+    border-color: rgb(210, 210, 210);
+}
+
+.modalBoxHeaderTradeunion {
+    text-align: center;
+    padding-top: 12px;
+    padding-right: 8px;
+}
+
+.modalBoxValueTradeunion {
+    margin-top: -20px;
+    text-align: center;
+    font-size: 42px;
+}
+
+.modalGraphContent {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #bdbcbc;
+}
+
+/*css for info boxes*/
+.boxInfoTradeUnion {
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+}
+
+.boxTradeunion {
+    width: 100%;
+    height: 120px;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    color: black;
+    background-color: rgba(210, 210, 210, 0.2);
+    border: 1px solid;
+    border-color: rgb(210, 210, 210);
+}
+
+.boxHeaderTradeunion {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.boxValueTradeunion {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 52px;
+}
+
+.boxValueTradeunionSubFigures {
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+/*css for user numbers*/
+.userInfoBar {
+    text-align: center;
+    background-color: #545454;
+    height: 25px;
+    padding-top: 3px;
+    color: white;
+}
+
+/*CSS FOR TRADEUNION HISTORY VIEW*/
+
+#quarterSelect {
+    margin-top: 30px;
+    color: black;
+    height: 220px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    overflow: hidden;
+}
+
+#quarterForShopDropDown {
+    display: none;
+}
+
+.historyGraphElement {
+    border: 1px solid grey;
+}
+
+
+.historyGraphOverlay {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    z-index: 5;
+    background-color: transparent;
+}
+
+.historyGraphSelect {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.quarterSelectBtn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.historyTableHeaderHeader {
+    margin-top: 30px;
+}
+
+
+/*css for pediod modalL*/
+#myModalShops {
+    padding-right: 0px;
+}
+
+.graph {
+    margin-top: 50px;
+}
+
+#periodModalPicker {
+    color: white;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    cursor: pointer;
+    opacity: .8;
+}
+
+    #periodModalPicker:hover {
+        opacity: 1;
+    }
+
+#myPeriodModal .modal-dialog {
+    width: 20%;
+}
+
+#myPeriodModal .graph-canvas {
+    width: 100%;
+    height: 160px;
+}
+
+
+/*MEDIA QUERIES*/
+@media (min-width: 767px) {
+    .weeklyStatsShopAgainstLastWeek {
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    .weeklyStatsShopAgainstQuarter {
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    .modal.in .modal-dialog {
+        width: 60%;
+    }
+
+    .clubContent {
+        margin-top: -20px;
+        color: whitesmoke;
+    }
+}
+
+
+@media (min-width: 1078px) {
+
+    .sideNavBar-toggle {
+        position: fixed;
+        height: 100%;
+        width: 220px;
+        top: 0px;
+        left: 0px;
+        background-color: #0c462a;
+        color: white;
+        -webkit-transition: .2s all ease;
+        -moz-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        transition: .2s all ease;
+        z-index: 10;
+    }
+
+
+        .sideNavBar-toggle #sideNavBarShopInfo {
+            text-align: center;
+            margin-top: 50px;
+            -webkit-transition: .2s all ease;
+            -moz-transition: .2s all ease;
+            -o-transition: .2s all ease;
+            transition: .2s all ease;
+        }
+
+        .sideNavBar-toggle #profilePicture {
+            width: 90px;
+            border-radius: 45px;
+            overflow: hidden;
+            -webkit-transition: .2s all ease;
+            -moz-transition: .2s all ease;
+            -o-transition: .2s all ease;
+            transition: .2s all ease;
+        }
+
+        .sideNavBar-toggle #shopTitle {
+            text-transform: uppercase;
+            -webkit-transition: .2s all ease;
+            -moz-transition: .2s all ease;
+            -o-transition: .2s all ease;
+            transition: .2s all ease;
+        }
+
+        .sideNavBar-toggle #sideNavBarToggle {
+            display: none;
+        }
+
+
+        .sideNavBar-toggle #sideNavBarList {
+            font-size: 16px;
+            font-weight: normal;
+            margin-left: 0px;
+        }
+
+        .sideNavBar-toggle .sideNavBarLink a {
+            color: white;
+        }
+
+        .sideNavBar-toggle .ondoDropDown {
+            color: white;
+            margin-left: 20px;
+            display: block;
+        }
+
+            .sideNavBar-toggle .ondoDropDown p {
+                margin-top: 50px;
+                margin-left: 10px;
+            }
+
+            .sideNavBar-toggle .ondoDropDown select {
+                width: 200px;
+                height: 30px;
+                background-color: rgba(0,0,0,.2);
+                border: none;
+                border-radius: 15px;
+                padding-left: 10px;
+                padding-right: 20px;
+                -webkit-transition: .2s all ease;
+                -moz-transition: .2s all ease;
+                -o-transition: .2s all ease;
+                transition: .2s all ease;
+            }
+
+                .sideNavBar-toggle .ondoDropDown select:hover {
+                    background-color: rgba(0,0,0,.5);
+                }
+
+
+                .sideNavBar-toggle .ondoDropDown select:focus {
+                    outline: 0px;
+                }
+
+            .sideNavBar-toggle .ondoDropDown option {
+                background-color: #0a3822;
+            }
+}
+
+@media (max-width: 1350px) {
+    .mainContent {
+        width: 92%;
+        margin-left: 140px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .mainContent {
+        width: 85%;
+        margin-left: 190px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    #bar-transactions-history {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1079px) {
+    .mainContent {
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .boxInfo {
+        margin-left: -20px;
+    }
+
+    #bar-transactions-history {
+        margin-top: 0px;
+    }
+
+
+    .sideNavBar {
+        height: 80px;
+        width: 100%;
+        background-color: #000000;
+        display: block;
+    }
+
+
+        .sideNavBar #sideNavBarShopInfo {
+            text-align: right;
+        }
+
+        .sideNavBar #profilePicture {
+            width: 50px;
+            margin-top: -45px;
+            margin-right: 120px;
+        }
+
+        .sideNavBar #shopTitle {
+            margin-top: -45px;
+            margin-right: 200px;
+        }
+
+        .sideNavBar #shopLocality {
+            margin-top: -10px;
+            margin-right: 200px;
+        }
+
+        .sideNavBar #sideNavBarToggle {
+            display: block;
+        }
+
+        .sideNavBar #sideNavBarList {
+            list-style-type: none;
+            display: none;
+        }
+
+        .sideNavBar .sideNavBarLink a {
+            color: white;
+        }
+
+        .sideNavBar .ondoDropDown {
+            display: none;
+        }
+}
+
+@media (max-width: 991px) {
+
+    #bar-transactions-history {
+        margin-top: 60px;
+    }
+
+    .clubHistoryInfo {
+        margin-top: 18px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .clubHistoryInfoBox {
+        margin-bottom: 50px;
+    }
+
+    #clubHistoryGraphElement1 {
+        margin-top: 30px;
+    }
+
+    #clubHistoryGraphElement4 {
+        margin-top: 40px;
+    }
+
+    .weeklyStatsShop {
+        margin-left: 15px!important;
+    }
+
+    .weeklyStatsShopAgainstLastWeek {
+        width: 100%;
+    }
+
+    .weeklyStatsShopAgainstQuarter {
+        width: 100%;
+    }
+
+    .shopText {
+    margin-top: 450px;
+}
+}
+
+@media (max-width: 767px) {
+    footer {
+        position: absolute !important;
+        text-align: center;
+        z-index: 0 !important;
+        bottom: 10px !important;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+    }
+
+    .historyGraphElement {
+        border: none;
+    }
+
+    #boxFour {
+        margin-bottom: 80px;
+    }
+
+    #clubFooter {
+        height: 60px;
+    }
+
+    #footerMenuIcon {
+        font-size: 40px;
+        margin-top: 5px;
+    }
+
+    #footerMenuIconText {
+        font-size: 18px;
+    }
+
+    .shopText {
+        margin-top: 100px
+}
+}
+
+@media (max-width: 460px) {
+    .angular-google-map-container {
+        height: 200px;
+    }
+
+    .loadingContent {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+}
